@@ -14,7 +14,7 @@ spec:
   volumeMode: Filesystem
   hostPath:
     path: /data/SocialMedia/media
-    tpe: DirectoryOrCreate
+    type: DirectoryOrCreate
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

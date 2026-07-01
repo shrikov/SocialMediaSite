@@ -7,14 +7,14 @@ metadata:
     app: social-media
 spec:
   capacity:
-    storage: 9Gi
+    storage: 8Gi
   accessModes:
     - ReadWriteMany
   volumeMode: Filesystem
   persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: /data/SocialMedia/static
-    type: DirecttoryOrCreate
+    type: DirectoryOrCreate
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -27,8 +27,8 @@ spec:
   volumeMode: Filesystem
   resources:
     requests:
-      storage: 9Gi
+      storage: 8Gi
   selector:
-    matchLebels:
+    matchLabels:
       type: local
       app: social-media
